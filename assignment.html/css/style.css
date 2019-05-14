@@ -1,0 +1,57 @@
+body{
+	 background-image: url("../img/yellow_background.png");
+}
+.wrapper{
+			width: 80%;
+			margin: 0 auto;			
+			overflow: hidden;
+			color: black;
+			min-height: 100%;
+    	}
+    	h3{
+    		position: relative;
+            left:20;
+    	}
+    	ul li {
+				list-style: none;
+				float: left;
+			}
+			ul li a {
+				text-decoration: none;
+			    color: black;
+			    padding: 10px 16px;
+			    display: block;
+			    font-family: sans-serif;
+			  
+			    border-top: 2px solid transparent;
+			    border-bottom: 2px solid transparent;
+		}
+    	 	ul li a:hover {
+			background-color: white;
+			color: indigo;
+			border-bottom: 2px pink;
+			border-image-repeat: repeat;
+		}
+		
+        .paragraph{
+            text-decoration: none;
+        }
+        
+        .heading {
+        	position: relative;
+        }
+        .logo{
+        	position: relative;
+        }
+        .boder{
+       width: 800px;
+       height: 2px;
+        }
+        .u{
+          color: rgb(0,0,0,0.5)
+        }
+        .footer{
+        	margin: 30px;
+            padding: 10px;
+        }
+        
