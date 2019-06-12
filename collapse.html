@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+</style>
+</head>
+<body>
+
+<h2>Accordion with symbols</h2>
+<p>In this example we have added a "plus" sign to each button. When the user clicks on the button, the "plus" sign is replaced with a "minus" sign.</p>
+<button class="accordion">who invented HTML?</button>
+<div class="panel">
+<h1> Tim Berners-Lee</h1>
+  <p>In 1980, physicist Tim Berners-Lee, a contractor at CERN, proposed and prototyped ENQUIRE, a system for CERN researchers to use and share documents. In 1989, Berners-Lee wrote a memo proposing an Internet-based hypertext system. Berners-Lee specified HTML and wrote the browser and server software in late 1990.
+</p>
+</div>
+
+<button class="accordion">who invented javascript?</button>
+<div class="panel">
+<h1> Hakon Wium Lie </h1>
+  <p>Hakon Wium Lie proposed the concept of CSS while working with Tim-Berner Lee(Inventor of World wide web) in 1994. The first CSS released as a official W3C(World Wide Web Consortium) on December 17, 1996. So, first officially CSS created by Hakon Wium Lie and Bert Bos (developed Argo web browser).
+</p>
+</div>
+
+<button class="accordion">who invented CSS?</button>
+<div class="panel">
+<h1>Brendan Eich</h1>
+  <p>A company called Netscape was founded in 1994 and created one of the first web browsers. They recruited Eich in 1995, because they wanted him to create a programming language for that web browser. ... It quickly gained popularity and influenced Netscape's decisions regarding JavaScript.</p>
+</div>
+
+<button class="accordion">who invented jquery?</button>
+<div class="panel"> <h1>John Resig</h1>
+  <p>It works on most web browsers and was invented by John Resig. The first release was in January 2006 at BarCamp NYC. Today there is a team of developers working on jQuery, which is led by Dave Methvin.
+</p>
+</div>
+
+<button class="accordion">who invented bootstrap?</button>
+<div class="panel">
+  <p>Bootstrap, originally named Twitter Blueprint, was developed by Mark Otto and Jacob Thornton at Twitter as a framework to encourage consistency across internal tools.</p>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+</body>
+</html>
